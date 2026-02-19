@@ -70,26 +70,25 @@ a{ color: inherit; }
   padding: .85rem 0;
 }
 
-/* ====== LOGO (IMAGE) ====== */
+/* ====== LOGO ====== */
 .logo{
-  display: inline-flex;       
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
   line-height: 0;
 }
 
-.logo::before{ content: none; } 
+.logo::before{ content: none; }
 
 .logo img{
-  height: 44px;                /* mobile */
+  height: 44px;     /* mobile */
   width: auto;
-  display: block;              
-  object-fit: contain;
+  display: block;
 }
 
 @media (min-width: 900px){
   .logo img{
-    height: 52px;              /* desktop */
+    height: 56px;   /* desktop */
   }
 }
 
