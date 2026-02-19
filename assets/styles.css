@@ -1,9 +1,8 @@
-
+/* styles.css — NowHire */
 
 /* ====== Reset / Base ====== */
 * { box-sizing: border-box; }
-html, body { height: 100%; }
-html, body { background: #000; }
+html, body { height: 100%; background: #000; }
 
 :root{
   --bg: #000000;
@@ -68,24 +67,31 @@ a{ color: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: .85rem 0;
 }
 
+/* ====== LOGO (IMAGE) ====== */
 .logo{
-  font-weight: 900;
-  text-decoration: none;
-  letter-spacing: .6px;
-  text-transform: uppercase;
   display: inline-flex;
   align-items: center;
-  gap: .65rem;
+  text-decoration: none;
+  line-height: 0;
 }
 
-.logo::before{
-  content: "★";
-  font-size: 1.15rem;
-  color: var(--accent2);
-  text-shadow: 0 0 18px rgba(0,212,255,0.45);
+/* Remove the old star */
+.logo::before{ content: none; }
+
+.logo img{
+  height: 26px;     /* smaller */
+  width: auto;
+  display: block;
+  filter:
+    drop-shadow(0 0 10px rgba(176,108,255,0.32))
+    drop-shadow(0 0 12px rgba(0,212,255,0.22));
+}
+
+@media (min-width: 900px){
+  .logo img{ height: 32px; }
 }
 
 .nav{
@@ -116,9 +122,7 @@ a{ color: inherit; }
 }
 
 /* ====== Hero ====== */
-.hero{
-  padding: 3.2rem 0 2.2rem;
-}
+.hero{ padding: 3.2rem 0 2.2rem; }
 
 .hero-inner{
   display: grid;
@@ -175,10 +179,7 @@ a{ color: inherit; }
   box-shadow: var(--shadow);
 }
 
-.h3{
-  font-size: 1.15rem;
-  margin: 0 0 .4rem;
-}
+.h3{ font-size: 1.15rem; margin: 0 0 .4rem; }
 
 .price{
   font-size: 1.25rem;
@@ -220,9 +221,7 @@ a{ color: inherit; }
   color: #fff;
 }
 
-.btn-outline:hover{
-  background: rgba(255,255,255,0.12);
-}
+.btn-outline:hover{ background: rgba(255,255,255,0.12); }
 
 /* ====== Callout ====== */
 .callout{
