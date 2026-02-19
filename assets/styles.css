@@ -82,12 +82,14 @@ a{ color: inherit; }
 .logo::before{ content: none; }
 
 .logo img{
-  height: 34px;   /* mobile */
+  height: 38px;
   width: auto;
 }
 
 @media (min-width: 900px){
-  .logo img{ height: 42px; }  /* desktop */
+  .logo img{
+    height: 48px;
+  }
 }
 
 .nav{
