@@ -82,16 +82,12 @@ a{ color: inherit; }
 .logo::before{ content: none; }
 
 .logo img{
-  height: 26px;     /* smaller */
+  height: 34px;   /* mobile */
   width: auto;
-  display: block;
-  filter:
-    drop-shadow(0 0 10px rgba(176,108,255,0.32))
-    drop-shadow(0 0 12px rgba(0,212,255,0.22));
 }
 
 @media (min-width: 900px){
-  .logo img{ height: 32px; }
+  .logo img{ height: 42px; }  /* desktop */
 }
 
 .nav{
