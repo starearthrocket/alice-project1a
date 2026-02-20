@@ -347,18 +347,3 @@ License: OpenAI Terms of Use
 All final HTML, CSS, layout decisions, and implementation were executed and adapted by the author.
 
 All design assets and images were created or modified by the author for this project.
-
-Final Compliance Check
-
-✔ Static front-end project
-✔ 3 structured pages
-✔ Information architecture implemented
-✔ UX planning documented
-✔ Wireframes included
-✔ Testing documented
-✔ Accessibility considered
-✔ Version control demonstrated
-✔ Deployment completed
-✔ Attribution included
-
-This submission aligns with distinction-level documentation and assessment standards.
