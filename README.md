@@ -28,7 +28,13 @@ Users can:
 - **Deployment:** ✅ GitHub Pages
 
 ## Attribution
-All code is custom written for this project unless stated otherwise.
+Development support and code guidance were provided by ChatGPT (OpenAI).
+
+Source: https://chat.openai.com  
+Accessed: 03 February 2026  
+License: OpenAI Terms of Use
+
+All final HTML, CSS, layout, and design decisions were implemented and adapted by the author.
 
 ### Images
 If you used external images, list them here (required if not your own).
