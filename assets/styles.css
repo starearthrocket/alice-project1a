@@ -34,6 +34,8 @@ a{ color: inherit; }
 .lead{ font-size: 1.08rem; max-width: 70ch; color: var(--muted); }
 .small{ font-size: .95rem; color: var(--muted); }
 .muted{ color: var(--muted); }
+.page-title{ margin: 0 0 .5rem; font-size: clamp(1.85rem, 2.6vw, 2.4rem); letter-spacing: -.02em; }
+.req{ color: rgba(255,255,255,0.75); }
 
 /* ====== Accessibility ====== */
 .skip-link{
@@ -87,9 +89,7 @@ a{ color: inherit; }
 }
 
 @media (min-width: 900px){
-  .logo img{
-    height: 56px;   /* desktop */
-  }
+  .logo img{ height: 56px; }
 }
 
 .nav{
@@ -136,13 +136,6 @@ a{ color: inherit; }
   letter-spacing: -.02em;
 }
 
-.hero h1 span{
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 .hero-card{
   background: var(--panel);
   border: 1px solid var(--border);
@@ -151,6 +144,18 @@ a{ color: inherit; }
   padding: 1.25rem;
 }
 
+.bullets{ padding-left: 1.1rem; margin: .65rem 0 0; }
+.bullets li{ margin: .35rem 0; }
+
+.mini-callout{
+  margin-top: 1rem;
+  padding: .85rem;
+  border-radius: calc(var(--radius) - 6px);
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+}
+
+/* Banner cropping */
 .hero-banner{
   aspect-ratio: 16 / 6;
   overflow: hidden;
@@ -162,10 +167,11 @@ a{ color: inherit; }
 .hero-banner img{
   width: 100%;
   height: 100%;
-  max-width: none;         
+  max-width: none;
   object-fit: cover;
   object-position: center;
-  display: block;  
+  display: block;
+  transform: scale(1.02);
 }
 
 /* ====== Components ====== */
@@ -176,12 +182,31 @@ a{ color: inherit; }
   margin-top: 1.25rem;
 }
 
+.grid-4{
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Two-column layout for contact page */
+.two-col{
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
 .card{
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.25rem;
   box-shadow: var(--shadow);
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.07);
 }
 
 .h3{ font-size: 1.15rem; margin: 0 0 .4rem; }
@@ -192,6 +217,10 @@ a{ color: inherit; }
   margin: .85rem 0 0;
   letter-spacing: -.01em;
 }
+
+/* Steps list */
+.steps{ margin: .75rem 0 0; padding-left: 1.15rem; }
+.steps li{ margin: .4rem 0; }
 
 /* ====== Buttons ====== */
 .btn-row{
@@ -214,6 +243,7 @@ a{ color: inherit; }
   background: linear-gradient(90deg, rgba(176,108,255,0.95), rgba(0,212,255,0.75));
   color: #05020a;
   box-shadow: 0 14px 40px rgba(0,0,0,0.55);
+  transition: transform .18s ease, filter .18s ease;
 }
 
 .btn:hover{
@@ -268,6 +298,11 @@ input::placeholder, textarea::placeholder{ color: rgba(255,255,255,0.55); }
 }
 
 /* ====== Responsive ====== */
+@media (max-width: 1000px){
+  .grid-4{ grid-template-columns: repeat(2, 1fr); }
+  .two-col{ grid-template-columns: 1fr; }
+}
+
 @media (max-width: 900px){
   .hero-inner{ grid-template-columns: 1fr; }
   .grid{ grid-template-columns: 1fr; }

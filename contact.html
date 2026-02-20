@@ -3,82 +3,133 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Now Hire | Contact</title>
-  <meta name="description" content=" Contact page for Now Hire Birmingham-based backline hire company" />
+  <title>Now Hire | Get a Quote</title>
+  <meta name="description" content="Request a backline quote. Tell us your dates, venues, and kit list to confirm availability." />
   <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
+
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
- 
+
+  <!-- Header -->
   <header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="logo" aria-label="NowHire home">
-  <img src="assets/img/nhlogo.png" alt="NowHire Backline Rentals Logo">
-</a>
- <nav aria-label="Main navigation">
-<ul class="nav">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="services.html">Backline</a></li>
-  <li><a class="active" href="contact.html" aria-current="page">Get a Quote</a></li>
-</ul>
-</nav>
-  </div>
-</header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Now Hire home">
+        <img src="assets/img/nhlogo.png" alt="Now Hire Backline Rentals Logo">
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Backline</a></li>
+          <li><a class="active" href="contact.html" aria-current="page">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main id="main">
     <section class="section">
-      <div class="container" style="width:min(700px,92%);">
-        <h1>Request a quote</h1>
-    <p class="lead">
-  Tell us what you need and when. We’ll confirm availability, spec and a UK delivery / collection option.
-   </p>
+      <div class="container">
+        <h1 class="page-title">Request a quote</h1>
+        <p class="lead">
+          Send your dates, venues and kit list. We’ll confirm availability and reply with a clear quote.
+        </p>
 
+        <div class="two-col">
+          <section class="card" aria-label="Quote request form">
+            <h2 class="h3">Quote details</h2>
+            <p class="small muted" style="margin-top:.25rem;">
+              This is a static project form (no backend). In a real build, it would submit to an email service or database.
+            </p>
 
-        <form class="form" action="#" method="post">
-          <div class="field">
-            <label for="name">Full name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
+            <form class="form" action="#" method="post">
+              <div class="field">
+                <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required placeholder="e.g., Alice Harper-Overton">
+              </div>
 
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-          </div>
+              <div class="field">
+                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="e.g., you@band.com">
+              </div>
 
-          <div class="field">
-            <label for="topic">Topic</label>
-            <select id="topic" name="topic" required>
-              <option value="">Choose one…</option>
-              <option>Services</option>
-              <option>Pricing</option>
-              <option>Drums</option>option>
-              <option>Guitar/Bass amps</option>option>
-              <option>Keys</option>
-              <option>Full backline package</option>
-              <option>Festival/venue support</option>
-              <option>Other</option>
-            </select>
-          </div>
+              <div class="field">
+                <label for="type">Booking type</label>
+                <select id="type" name="type">
+                  <option value="tour">Tour</option>
+                  <option value="festival">Festival</option>
+                  <option value="venue">Venue show</option>
+                  <option value="studio">Studio session</option>
+                </select>
+              </div>
 
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
+              <div class="field">
+                <label for="dates">Dates / schedule <span class="req" aria-hidden="true">*</span></label>
+                <input id="dates" name="dates" type="text" required placeholder="e.g., 12–15 March 2026 (Birmingham, Manchester)">
+              </div>
 
-          <button class="btn" type="submit">Send message</button>
+              <div class="field">
+                <label for="kit">Kit list <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="kit" name="kit" rows="6" required placeholder="e.g., Drum kit + 2x vocal mics + 2 guitar amps + bass rig"></textarea>
+              </div>
 
-          <p class="muted small">
-            Note: This project is static. The form is included for demonstration purposes.
-          </p>
-        </form>
+              <div class="field">
+                <label for="notes">Notes (delivery, tech support, changeovers)</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Any access info, stage times, or support needs."></textarea>
+              </div>
+
+              <button class="btn" type="submit" aria-label="Submit quote request">Submit request</button>
+              <p class="small muted" style="margin-top:.75rem;">
+                <span class="req" aria-hidden="true">*</span> Required fields
+              </p>
+            </form>
+          </section>
+
+          <aside class="card" aria-label="Contact information and guidance">
+            <h2 class="h3">What to include</h2>
+            <ul class="bullets">
+              <li>Dates + cities/venues</li>
+              <li>Kit list (quantities help)</li>
+              <li>Delivery address & load-in times</li>
+              <li>Any on-site tech support required</li>
+            </ul>
+
+            <div class="mini-callout" role="note" aria-label="Response time note">
+              <p class="small" style="margin:0;">
+                We typically respond within 24–72 hours depending on touring schedules.
+              </p>
+            </div>
+
+            <h3 class="h3" style="margin-top:1rem;">Prefer email?</h3>
+            <p class="muted">
+              Send details to: <strong>quotes@nowhire.example</strong><br>
+              (Placeholder email for this static project.)
+            </p>
+
+            <div class="btn-row">
+              <a class="btn btn-outline" href="services.html">Browse backline</a>
+              <a class="btn btn-outline" href="index.html">Back to home</a>
+            </div>
+          </aside>
+        </div>
+
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 Now Hire</p>
-      <p class="muted">We look forward to working with you.</p>
+      <div>
+        <p style="margin:0;">© 2026 Now Hire</p>
+        <p class="small muted" style="margin:.25rem 0 0;">Quotes · Delivery · Support</p>
+      </div>
+
+      <p class="muted" style="margin:0;">
+        <a href="index.html">Home</a> ·
+        <a href="services.html">Services</a> ·
+        <a href="#top">Back to top</a>
+      </p>
     </div>
   </footer>
 </body>
